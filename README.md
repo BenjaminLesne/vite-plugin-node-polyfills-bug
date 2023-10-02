@@ -1,8 +1,25 @@
-# React + Vite
+steps to reproduce:
+1- install dependencies
+```
+pnpm install
+```
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2- build the library :
+```
+pnpm build
+```
 
-Currently, two official plugins are available:
+3-  In main.jsx, uncomment line 4 and comment line 3
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+4- start the dev server
+```
+pnpm dev
+```
+
+5- check the console in Chrome
+`Uncaught SyntaxError: Unexpected string` and the webpage show nothing
+
+Expected behaviour :
+The web page should show the component App which displays : "yay production"
+
+I reproduced it with a Firefox and Chrome.
